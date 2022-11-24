@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JINJA TAG</title>
+    <style>
+        body{
+            background-color: red;
+
+        }
+        h1{
+            color: aqua;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    {%if a > 100 %}
+     <center><h1> a is maximum value</h1></center>
+    {% endif %}
+    
+
+   <center><h1> IF- ELSE CONDTIONS</h1></center> 
+    {% if a > b %}
+        <center><h1> {{a}} is maximum value</h1></center>
+    {% else %}
+        <center><h1>{{b}} is maximum value</h1></center>
+    {% endif %}
+    
+    
+
+    <h1><center>if -elif CONDTIONS</center></h1
+        {% if a > b and b > c %}
+           <center><h1> {{a}} is maximum value</h1></center>
+        {% elif b > c %}
+           <center><h1> {{b}} is maximum value</h1></center>
+        {% else %}
+            <center><h1> {{c}} is maximum value</h1></center>
+        {% endif %}
+    -->
+
+    <center><h1>  NOW USING NESTED CONDTIONS</h1></center>
+    {% if a > b %}
+         {% if a > c %}
+            <marquee behavior="scorll" direction="left"><center><h1> {{a}} is maximum value</h1></center></marquee>
+         {% else %}
+            <marquee behavior="scorll" direction="left"><center><h1>{{c}} is maximum value</h1></center></marquee> 
+        {% endif %}
+    {% else %}
+         {% if b > c %}
+         <marquee behavior="scorll" direction="left"><center> <h1>{{b}} is maximum value</h1></center></marquee>
+         {% else %}
+         <marquee behavior="scorll" direction="left"><center><h1>{{c}} is a maximum value</h1></center></marquee>
+         {% endif %}
+    {% endif %}
+
+        
+        
+</body>
+</html>
